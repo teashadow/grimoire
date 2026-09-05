@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "grimoire"
+version = "0.1.0"
+description = "MAD local wiki"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "click>=8.0",
+  "rich>=13.0",
+  "python-frontmatter>=1.0",
+]
+
+[project.scripts]
+grimoire = "grimoire_app.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
